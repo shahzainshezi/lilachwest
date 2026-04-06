@@ -1,0 +1,132 @@
+.contact-v2 {
+  background-color: var(--color-accent);
+  
+  /* Aurora Glow Effect - Updated for Green */
+  background-image: 
+    radial-gradient(circle at 10% 20%, rgba(255, 255, 255, 0.2) 0%, transparent 50%),
+    radial-gradient(circle at 90% 80%, rgba(0, 0, 0, 0.05) 0%, transparent 50%);
+  background-size: 200% 200%;
+  background-position: 0% 0%;
+  animation: contactGlow 8s cubic-bezier(0.4, 0, 0.2, 1) infinite alternate;
+  
+  color: #FFFFFF;
+  padding: var(--spacing-xxl) 0;
+  position: relative;
+}
+
+@keyframes contactGlow {
+  0% { background-position: 0% 0%; }
+  33% { background-position: 100% 0%; }
+  66% { background-position: 100% 100%; }
+  100% { background-position: 0% 100%; }
+}
+
+.contact-editorial-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-xxl);
+  align-items: center;
+}
+
+.contact-text-area .editorial-title {
+  color: #FFFFFF;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+}
+
+.contact-text-area .italic-text {
+  font-style: italic;
+  font-weight: 300;
+}
+
+.contact-text-area .accent-text {
+  color: #D9BB70; /* Gold color for highlight on dark teal */
+}
+
+.contact-subtitle {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.125rem;
+  max-width: 400px;
+}
+
+.minimal-form {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.form-row input {
+  width: 100%;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.4);
+  padding: 1rem 0;
+  color: #FFFFFF;
+  font-family: var(--font-body);
+  font-size: 1.25rem;
+  transition: var(--transition-smooth);
+}
+
+.form-row input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 300;
+}
+
+.form-row input:focus {
+  outline: none;
+  border-bottom-color: #121212;
+}
+
+.submit-btn-v2 {
+  margin-top: 2rem;
+  background-color: #121212;
+  color: #FFFFFF;
+  align-self: flex-start;
+}
+
+.submit-btn-v2:hover {
+  background-color: #FFFFFF;
+  color: var(--color-accent);
+  border-color: #FFFFFF;
+}
+
+@media (max-width: 992px) {
+  .contact-editorial-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-xl);
+  }
+
+  .contact-text-area {
+    text-align: center;
+  }
+
+  .contact-subtitle {
+    margin: 0 auto;
+  }
+
+  .submit-btn-v2 {
+    align-self: center;
+  }
+}
+
+/* Success State */
+.form-success-state {
+  text-align: left;
+  animation: fadeIn 0.6s ease-out;
+}
+
+.form-success-state h3 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.form-success-state p {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}

@@ -1,0 +1,150 @@
+.about-v3 {
+  background-color: var(--color-bg);
+  padding: var(--spacing-xxl) 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.about-overlap-grid {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.about-image-pillar {
+  width: 45%;
+  position: relative;
+  z-index: 1;
+}
+
+.about-image-pillar img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  object-position: center;
+  filter: grayscale(10%) contrast(1.05);
+  box-shadow: 0 20px 40px rgba(18, 18, 18, 0.08);
+}
+
+.pillar-accent {
+  position: absolute;
+  bottom: -15px;
+  left: -15px;
+  width: 150px;
+  height: 150px;
+  background-color: var(--color-accent);
+  z-index: -1;
+}
+
+.about-content-card {
+  width: 60%;
+  margin-left: -5%;
+  position: relative;
+  z-index: 2;
+  background-color: var(--color-bg-alt); /* White */
+  padding: 5rem 4.5rem;
+  box-shadow: 0 40px 80px rgba(18, 18, 18, 0.06);
+  border: 1px solid rgba(18, 18, 18, 0.03);
+}
+
+.editorial-eyebrow {
+  display: block;
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  margin-bottom: 2rem;
+}
+
+.editorial-title {
+  font-size: clamp(2.5rem, 4vw, 3.5rem);
+  line-height: 1.1;
+  color: var(--color-dark);
+  margin-bottom: 2.5rem;
+}
+
+.editorial-title .italic-text {
+  font-style: italic;
+  font-weight: 400;
+  color: var(--color-text-muted);
+}
+
+.card-divider {
+  width: 60px;
+  height: 2px;
+  background-color: var(--color-accent);
+  margin-bottom: 2.5rem;
+}
+
+.lead-text {
+  font-size: 1.25rem;
+  line-height: 1.8;
+  color: var(--color-dark);
+  font-weight: 400;
+  margin-bottom: 1.5rem;
+}
+
+.body-text {
+  font-size: 1.05rem;
+  line-height: 1.9;
+  color: var(--color-text-muted);
+  font-weight: 300;
+}
+
+@media (max-width: 1200px) {
+  .about-content-card {
+    padding: 4rem 3rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .about-overlap-grid {
+    flex-direction: column;
+  }
+
+  .about-image-pillar {
+    width: 90%;
+    margin-right: auto;
+  }
+
+  .pillar-accent {
+    bottom: -15px;
+    left: -15px;
+  }
+
+  .about-content-card {
+    width: 90%;
+    margin-left: auto;
+    margin-top: -15%;
+    padding: 3.5rem 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-image-pillar, .about-content-card {
+    width: 100%;
+  }
+
+  .about-image-pillar {
+    aspect-ratio: 1 / 1;
+  }
+
+  .about-content-card {
+    margin-top: -10%;
+    padding: 3rem 1.5rem;
+    text-align: center;
+  }
+
+  .editorial-title {
+    font-size: 2.5rem;
+  }
+
+  .card-divider {
+    margin: 0 auto 2.5rem;
+  }
+
+  .lead-text {
+    font-size: 1.15rem;
+  }
+}
