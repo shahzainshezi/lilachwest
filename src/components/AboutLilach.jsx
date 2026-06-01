@@ -23,7 +23,7 @@ const AboutLilach = () => {
 
           <div className="lilach-image-column">
              <div className="image-frame">
-               <img src="./images/670e9de3-60d7-483c-a9c6-420149e7aec7.jfif" alt="Lilach West - Financial Professional" loading="lazy" decoding="async" />
+               <img src="./images/founder_image.png" alt="Lilach West - Financial Professional" loading="lazy" decoding="async" />
              </div>
              <div className="image-caption">Lilach West — Founder</div>
           </div>

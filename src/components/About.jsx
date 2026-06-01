@@ -8,7 +8,7 @@ const About = () => {
 
         <div className="about-overlap-grid">
           <div className="about-image-pillar">
-            <img src="./images/ChatGPT Image Apr 4, 2026, 01_59_09 AM.png" alt="Office Professional Environment" loading="lazy" decoding="async" />
+            <img src="./images/firm_image.png" alt="Office Professional Environment" loading="lazy" decoding="async" />
             <div className="pillar-accent"></div>
           </div>
 

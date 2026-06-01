@@ -23,7 +23,7 @@ const Hero = () => {
         <div className="hero-media-wrapper">
           <div className="hero-media">
             <img
-              src="./images/Promoting iHeartMED with a smile_cleanup-Picsart-AiImageEnhancer.png"
+              src="./images/hero_image.png"
               alt="Lilach West - Personalized Financial Advisory"
               className="hero-img"
               fetchPriority="high"
