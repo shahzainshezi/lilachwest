@@ -15,7 +15,7 @@ const Hero = () => {
             Personalized financial strategies designed to protect your future, grow your wealth, and create lasting security for you and your family.
           </p>
           <div className="hero-actions">
-            <a href="#contact" className="btn btn-primary">Schedule Consultation</a>
+            <a href="#book" className="btn btn-primary">Schedule Consultation</a>
             <a href="#about" className="link-elegant">Explore Firm Insights</a>
           </div>
         </div>

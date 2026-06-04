@@ -1,0 +1,482 @@
+.book-page {
+  font-family: var(--font-body);
+  background-color: var(--color-bg);
+  color: var(--color-text-main);
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Background decorations */
+.bg-decorations {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.bg-blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(140px);
+  opacity: 0.12;
+  animation: pulse-float 22s infinite alternate ease-in-out;
+}
+
+.blob-green-1 {
+  width: 600px;
+  height: 600px;
+  background: var(--color-accent);
+  top: -200px;
+  left: -200px;
+}
+
+.blob-green-2 {
+  width: 500px;
+  height: 500px;
+  background: var(--color-accent);
+  bottom: -150px;
+  right: -150px;
+  animation-delay: -5s;
+}
+
+@keyframes pulse-float {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(40px, 60px) scale(1.08);
+  }
+  100% {
+    transform: translate(-20px, 30px) scale(0.95);
+  }
+}
+
+/* Hero & Booking Form section */
+.book-hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+  padding-top: 10rem;
+  padding-bottom: 5rem;
+}
+
+.editorial-title {
+  font-family: var(--font-heading);
+  font-size: clamp(2.8rem, 5vw, 4rem);
+  font-weight: 500;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  margin-bottom: 2rem;
+  color: var(--color-dark);
+}
+
+.book-page .editorial-title .italic-text,
+.book-page .italic-text {
+  font-style: italic;
+  color: var(--color-accent);
+  font-weight: 400;
+  white-space: nowrap;
+}
+
+.subtext {
+  font-size: 1.2rem;
+  line-height: 1.7;
+  color: var(--color-text-muted);
+  max-width: 600px;
+}
+
+/* Form Card details */
+.hero-form-wrapper {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.form-card {
+  width: 100%;
+  max-width: 480px;
+  background-color: var(--color-bg-alt);
+  border: 1px solid rgba(18, 18, 18, 0.08);
+  box-shadow: 0 30px 60px -15px rgba(18, 18, 18, 0.05);
+  padding: 3rem;
+  position: relative;
+  animation: slide-in 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+@keyframes slide-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.form-header h3 {
+  font-family: var(--font-heading);
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: var(--color-dark);
+  margin-bottom: 0.5rem;
+}
+
+.form-subtitle {
+  font-size: 0.95rem;
+  color: var(--color-text-muted);
+  line-height: 1.5;
+}
+
+.editorial-divider {
+  width: 60px;
+  height: 1px;
+  background-color: var(--color-accent);
+  margin: 1rem 0 1.5rem;
+}
+
+.editorial-divider.left-align {
+  margin-left: 0;
+}
+
+.booking-form {
+  margin-top: 2rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  color: var(--color-dark-muted);
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 1rem;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  background-color: var(--color-bg);
+  border: 1px solid rgba(18, 18, 18, 0.1);
+  color: var(--color-dark);
+  transition: var(--transition-smooth);
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: var(--color-accent);
+  background-color: var(--color-bg-alt);
+  box-shadow: 0 0 0 3px rgba(50, 110, 98, 0.08);
+}
+
+.btn-submit {
+  width: 100%;
+  padding: 1.1rem;
+  font-weight: 500;
+  margin-top: 1rem;
+}
+
+.btn-submit:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+/* Feature Cards Grid */
+.book-features {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  border-top: 1px solid rgba(18, 18, 18, 0.05);
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+.feature-card {
+  background-color: var(--color-bg-alt);
+  border: 1px solid rgba(18, 18, 18, 0.06);
+  padding: 3rem;
+  transition: var(--transition-smooth);
+  box-shadow: 0 10px 30px rgba(18, 18, 18, 0.02);
+  display: flex;
+  flex-direction: column;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--color-accent);
+  box-shadow: 0 20px 40px rgba(18, 18, 18, 0.05);
+}
+
+.card-icon-wrapper {
+  color: var(--color-accent);
+  margin-bottom: 1.8rem;
+  display: inline-flex;
+  align-items: center;
+}
+
+.feature-card h3 {
+  font-family: var(--font-heading);
+  font-size: 1.4rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  color: var(--color-dark);
+}
+
+.feature-card p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--color-text-muted);
+}
+
+/* What to Expect Section */
+.book-expectation {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+  border-top: 1px solid rgba(18, 18, 18, 0.05);
+}
+
+.expectation-grid {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.expectation-media {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.image-frame-decor {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  width: 100%;
+  height: 100%;
+  border: 1px solid var(--color-accent);
+  opacity: 0.3;
+  z-index: 0;
+}
+
+.image-wrapper {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  background-color: #eee;
+  overflow: hidden;
+}
+
+.expectation-img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  display: block;
+  filter: grayscale(10%) contrast(102%);
+  transition: var(--transition-slow);
+}
+
+.expectation-img:hover {
+  transform: scale(1.03);
+}
+
+.expectation-content h2 {
+  font-family: var(--font-heading);
+  font-size: 2.8rem;
+  font-weight: 500;
+  color: var(--color-dark);
+  margin-top: 0.5rem;
+}
+
+.editorial-eyebrow {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-weight: 500;
+  color: var(--color-accent);
+  display: block;
+}
+
+.lead-text {
+  font-size: 1.15rem;
+  line-height: 1.7;
+  color: var(--color-dark-muted);
+  margin-bottom: 1.5rem;
+  font-weight: 400;
+}
+
+.book-expectation .body-text {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: var(--color-text-muted);
+  margin-bottom: 2.5rem;
+}
+
+.benefits-checklist {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.check-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.check-icon {
+  color: var(--color-accent);
+  flex-shrink: 0;
+}
+
+.check-item span {
+  font-size: 1rem;
+  color: var(--color-dark-muted);
+  font-weight: 500;
+}
+
+/* Trust Banner Section */
+.book-trust {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  border-top: 1px solid rgba(18, 18, 18, 0.05);
+}
+
+.trust-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+.trust-item {
+  background-color: var(--color-bg-alt);
+  border: 1px solid rgba(18, 18, 18, 0.05);
+  border-top: 3px solid var(--color-accent);
+  padding: 3rem 2.5rem;
+  box-shadow: 0 15px 40px rgba(18, 18, 18, 0.02);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: var(--transition-smooth);
+}
+
+.trust-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 25px 50px rgba(18, 18, 18, 0.05);
+  border-top-color: var(--color-dark);
+}
+
+.trust-icon-box {
+  width: 44px;
+  height: 44px;
+  background-color: rgba(50, 110, 98, 0.06);
+  color: var(--color-accent);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.8rem;
+}
+
+.trust-item h4 {
+  font-family: var(--font-heading);
+  font-size: 1.35rem;
+  font-weight: 500;
+  margin-bottom: 0.8rem;
+  color: var(--color-dark);
+}
+
+.trust-item p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: var(--color-text-muted);
+}
+
+/* Footer details */
+.book-footer {
+  padding: 3rem 0;
+  border-top: 1px solid rgba(18, 18, 18, 0.05);
+  text-align: center;
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 992px) {
+  .book-hero {
+    grid-template-columns: 1fr;
+    gap: 50px;
+    padding-top: 8rem;
+    text-align: center;
+  }
+
+  .subtext {
+    margin: 0 auto;
+  }
+
+  .hero-form-wrapper {
+    justify-content: center;
+  }
+
+  .form-card {
+    max-width: 500px;
+    padding: 2.5rem;
+  }
+
+  .editorial-divider {
+    margin: 1rem auto 1.5rem;
+  }
+
+  .editorial-divider.left-align {
+    margin-left: auto;
+  }
+
+  .features-grid,
+  .trust-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .expectation-grid {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  .expectation-content {
+    text-align: center;
+  }
+
+  .benefits-checklist {
+    align-items: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .form-card {
+    padding: 2rem 1.5rem;
+  }
+  
+  .book-expectation,
+  .book-trust,
+  .book-features {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+}

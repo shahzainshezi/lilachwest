@@ -29,7 +29,7 @@ const Header = () => {
           <a href="#about" className="link-elegant">About Firm</a>
           <a href="#services" className="link-elegant">Expertise</a>
           <a href="#process" className="link-elegant">Philosophy</a>
-          <a href="#contact" className="btn btn-primary btn-sm">Let's Talk</a>
+          <a href="#book" className="btn btn-primary btn-sm">Let's Talk</a>
         </nav>
 
         <button 
