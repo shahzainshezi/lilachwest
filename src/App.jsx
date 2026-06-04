@@ -56,6 +56,9 @@ function App() {
 
     const handleAnchorClick = function (e) {
       const href = this.getAttribute('href');
+      if (href === '#booking' || href === '#book' || href === '#thank-you') {
+        return;
+      }
       if (href.startsWith('#') && href !== '#') {
         e.preventDefault();
         const targetElement = document.querySelector(href);
