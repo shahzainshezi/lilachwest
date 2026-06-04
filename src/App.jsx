@@ -20,7 +20,14 @@ function App() {
     if (hash === '#thank-you' || path.endsWith('/thank-you') || path.endsWith('/thank-you.html')) {
       return 'thank-you';
     }
-    if (hash === '#book' || path.endsWith('/book') || path.endsWith('/book.html')) {
+    if (
+      hash === '#book' || 
+      hash === '#booking' || 
+      path.endsWith('/book') || 
+      path.endsWith('/book.html') ||
+      path.endsWith('/booking') || 
+      path.endsWith('/booking.html')
+    ) {
       return 'book';
     }
     return 'home';

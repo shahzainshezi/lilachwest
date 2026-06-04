@@ -19,7 +19,7 @@ const Footer = () => {
               <a href="#about" className="link-elegant">The Firm</a>
               <a href="#services" className="link-elegant">Expertise</a>
               <a href="#process" className="link-elegant">Philosophy</a>
-              <a href="#contact" className="link-elegant">Contact</a>
+              <a href="#booking" className="link-elegant">Schedule Consultation</a>
             </nav>
           </div>
 
